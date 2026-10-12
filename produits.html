@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produits – Armurerie Cadjee, Saint-Denis de La Réunion</title>
+  <meta name="description" content="Armes de chasse et de tir, munitions, optique, coutellerie, accessoires, sécurité et habillement : les produits présentés par l’Armurerie Cadjee à Saint-Denis de La Réunion.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#26272c">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,500;125,600&family=Inter:wght@400;500;600&family=Michroma&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/config.js"></script>
+  <script src="js/layout.js"></script>
+</head>
+<body>
+
+<site-header page="produits"></site-header>
+
+<main id="contenu">
+
+  <div class="page-tete">
+    <div class="wrap">
+      <p class="surtitre">Catalogue</p>
+      <h1>Nos produits</h1>
+      <p class="chapeau">Les références présentées ici sont vendues en magasin uniquement. Pour connaître un prix ou une disponibilité, appelez-nous ou passez nous voir.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="wrap">
+
+      <div class="filtres">
+        <div class="filtres__rayons" id="filtre-rayons" role="group" aria-label="Filtrer par rayon"></div>
+        <div class="filtres__ligne">
+          <label class="champ champ--recherche">
+            <span class="sr">Rechercher un produit</span>
+            <input type="search" id="recherche" placeholder="Rechercher un produit, une marque, un calibre" autocomplete="off">
+          </label>
+          <label class="champ">
+            <span class="sr">Univers</span>
+            <select id="filtre-univers"></select>
+          </label>
+          <label class="champ">
+            <span class="sr">Classement</span>
+            <select id="filtre-classement">
+              <option value="">Tous les classements</option>
+              <option value="B">Catégorie B</option>
+              <option value="C">Catégorie C</option>
+              <option value="D">Catégorie D</option>
+              <option value="libre">Non classé</option>
+            </select>
+          </label>
+          <p class="compteur" id="compteur" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <div class="catalogue__titre filet" id="rayon-titre"></div>
+
+      <ul class="produits-grille" id="liste-produits"></ul>
+
+      <div class="vide" id="aucun-produit" hidden>
+        <p>Aucun produit ne correspond à cette recherche. Le magasin propose bien d’autres références : contactez-nous.</p>
+        <button type="button" class="btn btn--trait" id="reinitialiser">Réinitialiser les filtres</button>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section section--sombre">
+    <div class="wrap appel">
+      <div>
+        <h2>Vous ne trouvez pas un modèle ?</h2>
+        <p>Toutes les références du magasin ne figurent pas sur le site. Appelez-nous pour vérifier une disponibilité.</p>
+      </div>
+      <div class="actions">
+        <a class="btn btn--accent" data-site="tel" href="contact.html"></a>
+        <a class="btn btn--clair" href="demarches.html">Voir les démarches</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<dialog class="fiche" id="fiche"></dialog>
+
+<site-footer></site-footer>
+
+<script src="js/produits-data.js"></script>
+<script src="js/catalogue.js"></script>
+</body>
+</html>
